@@ -29,9 +29,9 @@ export async function fetchProductsByShopId(shopId: string): Promise<Product[]> 
 
   const { data, error } = await supabase
     .from("products")
-    .select("*")
+    .select("id,shop_id,product_name,product_description,price,currency,stock,category,image_1,image_2")
     .eq("shop_id", shopId)
-    .order("name", { ascending: true });
+    .order("product_name", { ascending: true });
 
   if (error) {
     throw new Error(error.message);

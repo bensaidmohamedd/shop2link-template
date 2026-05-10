@@ -51,7 +51,7 @@ export function CartSheet({ shop, children }: CartSheetProps) {
             {t.yourCart}
           </SheetTitle>
           <SheetDescription>
-            {interpolate(t.cartDescription, { shopName: shop.name })}
+            {interpolate(t.cartDescription, { shopName: shop.shop_name })}
           </SheetDescription>
         </SheetHeader>
 
@@ -64,9 +64,9 @@ export function CartSheet({ shop, children }: CartSheetProps) {
                 return (
                   <div key={item.id} className="flex gap-4">
                     <div className="h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-muted">
-                      {item.image_url ? (
+                      {item.image_1 ? (
                         <img
-                          src={item.image_url}
+                          src={item.image_1}
                           alt={localizedProduct.name}
                           className="h-full w-full object-cover"
                         />

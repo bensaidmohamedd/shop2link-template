@@ -378,9 +378,10 @@ export function normalizeCategoryId(category: string | null | undefined) {
 
 export function getLocalizedProduct(product: Product, language: Language) {
   return {
-    name: product.name_translations?.[language] ?? product.name,
+    name: product.product_name_translations?.[language] ?? product.product_name,
     description:
-      product.description_translations?.[language] ?? product.description,
+      product.product_description_translations?.[language] ??
+      product.product_description,
     category: getCategoryLabel(product.category, language),
   };
 }

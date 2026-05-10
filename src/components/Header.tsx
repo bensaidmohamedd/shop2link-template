@@ -26,16 +26,16 @@ export function Header({ shop }: HeaderProps) {
             {shop.logo_url ? (
               <img
                 src={shop.logo_url}
-                alt={`${shop.name} logo`}
+                alt={`${shop.shop_name} logo`}
                 className="h-full w-full object-cover"
               />
             ) : (
-              shop.name.charAt(0)
+              shop.shop_name.charAt(0)
             )}
           </div>
           <div className="min-w-0">
             <p className="truncate text-sm font-semibold leading-tight text-slate-950 dark:text-white">
-              {shop.name}
+              {shop.shop_name}
             </p>
             <p className="hidden text-xs text-muted-foreground sm:block">
               {t.poweredBy}

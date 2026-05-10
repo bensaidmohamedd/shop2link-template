@@ -21,9 +21,9 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <Card className="group overflow-hidden border-orange-200/70 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-soft dark:border-white/10 dark:bg-slate-900">
       <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
-        {product.image_url ? (
+        {product.image_1 ? (
           <img
-            src={product.image_url}
+            src={product.image_1}
             alt={localizedProduct.name}
             className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
             loading="lazy"
@@ -34,8 +34,8 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         )}
         <div className="absolute left-4 top-4 rtl:left-auto rtl:right-4">
-          <Badge variant={product.in_stock ? "shop" : "secondary"}>
-            {product.in_stock ? t.inStock : t.soldOut}
+          <Badge variant={product.stock ? "shop" : "secondary"}>
+            {product.stock ? t.inStock : t.soldOut}
           </Badge>
         </div>
       </div>
@@ -58,11 +58,11 @@ export function ProductCard({ product }: ProductCardProps) {
         <Button
           variant="shop"
           className="mt-5 w-full"
-          disabled={!product.in_stock}
+          disabled={!product.stock}
           onClick={() => addToCart(product)}
         >
           <Plus className="mr-2 h-4 w-4 rtl:ml-2 rtl:mr-0" />
-          {product.in_stock ? t.addToCart : t.unavailable}
+          {product.stock ? t.addToCart : t.unavailable}
         </Button>
       </CardContent>
     </Card>

@@ -44,16 +44,16 @@ export function createWhatsAppCheckoutUrl(
   items: CartItem[],
   language: Language,
 ) {
-  const number = normalizeWhatsAppNumber(shop.whatsapp);
-  const message = createCheckoutMessage(items, shop.name, language);
+  const number = normalizeWhatsAppNumber(shop.phone_number);
+  const message = createCheckoutMessage(items, shop.shop_name, language);
 
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }
 
 export function createWhatsAppContactUrl(shop: Shop, language: Language) {
-  const number = normalizeWhatsAppNumber(shop.whatsapp);
+  const number = normalizeWhatsAppNumber(shop.phone_number);
   const message = interpolate(translations[language].contactMessage, {
-    shopName: shop.name,
+    shopName: shop.shop_name,
   });
 
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;

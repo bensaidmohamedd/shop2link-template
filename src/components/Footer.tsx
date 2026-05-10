@@ -22,7 +22,7 @@ export function Footer({ shop }: FooterProps) {
       <div className="container flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="font-semibold text-slate-950 dark:text-white">
-            {shop.name}
+            {shop.shop_name}
           </p>
           <p className="mt-1 text-sm text-muted-foreground">
             Copyright {new Date().getFullYear()} Shop2Link. {t.copyright}

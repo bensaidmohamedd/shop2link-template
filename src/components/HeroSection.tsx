@@ -32,7 +32,7 @@ export function HeroSection({ shop, products }: HeroSectionProps) {
             {t.curatedStorefront}
           </Badge>
           <h1 className="text-balance text-4xl font-semibold tracking-normal text-slate-950 dark:text-white sm:text-5xl lg:text-6xl">
-            {shop.name}
+            {shop.shop_name}
           </h1>
           <p className="mt-5 max-w-xl text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg">
             {shopDescription}
@@ -89,7 +89,7 @@ export function HeroSection({ shop, products }: HeroSectionProps) {
                   ].join(" ")}
                 >
                   <img
-                    src={product.image_url ?? ""}
+                    src={product.image_1 ?? ""}
                     alt={localizedProduct.name}
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                   />

@@ -14,9 +14,9 @@ A production-ready React + Vite ecommerce storefront template for dynamic mercha
 
 ## Routes
 
-- `/shop/demo-store`
-- `/shop/nike-store`
-- `/shop/my-fashion-shop`
+- `/demo-store`
+- `/nike-store`
+- `/my-fashion-shop`
 
 When Supabase env vars are not configured, the app uses polished mock shop data so the template can run immediately.
 
@@ -35,11 +35,14 @@ When Supabase env vars are not configured, the app uses polished mock shop data 
 
 - `id`
 - `shop_id`
-- `name`
+- `product_name`
+- `product_description`
 - `price`
-- `image_url`
-- `description`
-- `in_stock`
+- `currency`
+- `category`
+- `image_1`
+- `image_2`
+- `stock`
 
 ## Setup
 

@@ -10,14 +10,20 @@ export type Shop = {
 export type Product = {
   id: string;
   shop_id: string;
-  name: string;
+  product_name: string;
+  product_description: string | null;
   price: number;
-  image_url: string | null;
-  description: string | null;
-  in_stock: boolean;
+  currency: string;
+  stock: boolean;
   category?: string | null;
-  name_translations?: Partial<Record<"fr" | "en" | "ar", string>> | null;
-  description_translations?: Partial<Record<"fr" | "en" | "ar", string>> | null;
+  image_1: string | null;
+  image_2: string | null;
+  product_name_translations?: Partial<
+    Record<"fr" | "en" | "ar", string>
+  > | null;
+  product_description_translations?: Partial<
+    Record<"fr" | "en" | "ar", string>
+  > | null;
 };
 
 export type CartItem = Product & {

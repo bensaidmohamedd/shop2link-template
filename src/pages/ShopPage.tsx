@@ -23,7 +23,7 @@ export function ShopPage() {
       return;
     }
 
-    document.title = `${shop.name} | Shop2Link`;
+    document.title = `${shop.shop_name} | Shop2Link`;
   }, [shop]);
 
   if (isLoading && !shop) {
@@ -38,7 +38,8 @@ export function ShopPage() {
     <div
       style={
         {
-          "--shop-accent": shop.theme_color ?? "#ea580c"
+          "--shop-accent":"#ea580c"
+          // "--shop-accent": shop.theme_color ?? "#ea580c"
         } as CSSProperties
       }
     >

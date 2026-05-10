@@ -16,8 +16,8 @@ export default function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/shop/demo-store" replace />} />
-      <Route path="/shop/:slug" element={<ShopPage />} />
+      <Route path="/" element={<Navigate to="/demo-store" replace />} />
+      <Route path="/:slug" element={<ShopPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
