@@ -10,8 +10,8 @@ export async function fetchShopBySlug(slug: string): Promise<Shop | null> {
 
   const { data, error } = await supabase
     .from("shops")
-    .select("id,name,slug,logo_url,description,whatsapp,theme_color")
-    .eq("slug", slug)
+    .select("id,shop_name,shop_slug,logo_url,description,phone_number")
+    .eq("shop_slug", slug)
     .maybeSingle();
 
   if (error) {

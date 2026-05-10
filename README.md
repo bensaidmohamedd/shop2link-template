@@ -25,12 +25,11 @@ When Supabase env vars are not configured, the app uses polished mock shop data 
 `shops`
 
 - `id`
-- `name`
-- `slug`
+- `shop_name`
+- `shop_slug`
 - `logo_url`
 - `description`
-- `whatsapp`
-- `theme_color`
+- `phone_number`
 
 `products`
 

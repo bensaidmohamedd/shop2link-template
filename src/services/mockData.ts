@@ -3,13 +3,12 @@ import { titleFromSlug } from "@/lib/utils";
 
 const demoShop: Shop = {
   id: "shop_demo_001",
-  name: "Shop2Link Demo",
-  slug: "shop2link-demo",
+  shop_name: "Shop2Link Demo",
+  shop_slug: "shop2link-demo",
   logo_url: "https://shop2llink.web.app/assets/img/logofinal.png",
   description:
     "Des essentiels premium pour les créateurs modernes, avec commande rapide sur WhatsApp et expérience mobile fluide.",
-  whatsapp: "+227 87145144",
-  theme_color: "#ea580c",
+  phone_number: "+227 87145144",
 };
 
 const demoProducts: Product[] = [
@@ -135,16 +134,15 @@ const demoProducts: Product[] = [
 ];
 
 export function getMockShopBySlug(slug: string): Shop {
-  if (slug === demoShop.slug) {
+  if (slug === demoShop.shop_slug) {
     return demoShop;
   }
 
   return {
     ...demoShop,
     id: `mock_${slug}`,
-    slug,
-    name: titleFromSlug(slug) || demoShop.name,
-    theme_color: demoShop.theme_color,
+    shop_slug: slug,
+    shop_name: titleFromSlug(slug) || demoShop.shop_name,
   };
 }
 

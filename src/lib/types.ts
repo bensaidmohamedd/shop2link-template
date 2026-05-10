@@ -1,11 +1,10 @@
 export type Shop = {
   id: string;
-  name: string;
-  slug: string;
+  shop_name: string;
+  shop_slug: string;
   logo_url: string | null;
   description: string | null;
-  whatsapp: string | null;
-  theme_color: string | null;
+  phone_number: string | null;
 };
 
 export type Product = {

@@ -73,7 +73,7 @@ export const translations = {
       "Essayez une autre catégorie ou revenez à tous les produits.",
     backToShop: "Retour à la boutique",
     inStock: "En stock",
-    soldOut: "Épuisé",
+    soldOut: "En rupture de stock",
     addToCart: "Ajouter au panier",
     unavailable: "Indisponible",
     yourCart: "Votre panier",
