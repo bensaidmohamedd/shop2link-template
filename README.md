@@ -48,5 +48,3 @@ When Supabase env vars are not configured, the app uses polished mock shop data 
 npm install
 npm run dev
 ```
-
-Copy `.env.example` to `.env` and add your Supabase values when connecting a real backend.
