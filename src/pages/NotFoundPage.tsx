@@ -21,7 +21,7 @@ export function NotFoundPage() {
           {t.shopNotFoundDescription}
         </p>
         <Button asChild className="mt-6">
-          <Link to="/shop/demo-store">{t.openDemoShop}</Link>
+          <Link to="/demo-store">{t.openDemoShop}</Link>
         </Button>
       </div>
     </main>
